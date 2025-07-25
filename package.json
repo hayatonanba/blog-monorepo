@@ -1,13 +1,23 @@
 {
   "name": "blog-monorepo",
-  "private": true,             
+  "private": true,
   "packageManager": "pnpm@9.1.1",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "dev": "pnpm -r dev",      
+    "dev": "pnpm -r dev",
     "build": "pnpm -r build"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.10",
+    "dotenv": "^17.2.1",
+    "drizzle-orm": "^0.44.3",
+    "drizzle-zod": "^0.8.2",
+    "zod": "^4.0.10"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.4"
   }
 }
